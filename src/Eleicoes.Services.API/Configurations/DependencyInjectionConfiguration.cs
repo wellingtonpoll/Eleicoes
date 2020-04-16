@@ -16,6 +16,7 @@ namespace Eleicoes.Services.API.Configurations
 
             services.AddSingleton<ICandidatoRepository, CandidatoRepository>();
             services.AddSingleton<ICandidatoAppService, CandidatoAppService>();
+            services.AddSingleton<ICandidatoService, CandidatoService>();
             services.AddScoped<ICandidatoImportService, CandidatoImportService>();
             services.AddHostedService<CandidatoImportHostedService>();
         }

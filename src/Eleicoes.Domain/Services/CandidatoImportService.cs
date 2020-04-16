@@ -47,11 +47,14 @@ namespace Eleicoes.Domain.Services
                     File.Delete(file);
                 }
 
-                _logger.LogInformation("Convertendo candidatos...");
-                var candidatos = csvCandidatos.Select(c => CsvCandidatoParser.ConverteCsvParaDominio(c));
+                if (csvCandidatos.Any())
+                {
+                    _logger.LogInformation("Convertendo candidatos...");
+                    var candidatos = csvCandidatos.Select(c => CsvCandidatoParser.ConverteCsvParaDominio(c));
 
-                _logger.LogInformation("Armazenando candidatos...");
-                await _candidatoRepository.AdicionaAsync(candidatos);
+                    _logger.LogInformation("Armazenando candidatos...");
+                    await _candidatoRepository.AdicionaAsync(candidatos);
+                }
 
                 _logger.LogInformation("Serviço de importação de candidatos csv finalizado com sucesso!");
             }

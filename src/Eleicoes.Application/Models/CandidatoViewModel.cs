@@ -4,8 +4,8 @@ namespace Eleicoes.Application.Models
 {
     public class CandidatoViewModel
     {
-        public int Id { get; set; }
-        public int NumeroCandidato { get; set; }
+        public long Id { get; set; }
+        public long NumeroCandidato { get; set; }
         public string AnoEleicao { get; set; }
         public string Nome { get; set; }
         public DateTime Nascimento { get; set; }

@@ -5,6 +5,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Faker.NETCore" Version="1.0.2" />
     <PackageReference Include="NBuilder" Version="6.1.0" />
   </ItemGroup>
 

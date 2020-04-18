@@ -19,10 +19,11 @@ namespace Eleicoes.Infra.Data.Repositories
             await Task.CompletedTask;
         }
 
-        public IQueryable<Candidato> Lista(string ano)
+        public IQueryable<Candidato> Lista(string anoEleicao)
         {
             var candidatoBuilder = new CandidatoBuilder();
-            return candidatoBuilder.BuildList().AsQueryable();
+            var candidatos = candidatoBuilder.BuildList(anoEleicao).AsQueryable();
+            return candidatos;
         }
     }
 }

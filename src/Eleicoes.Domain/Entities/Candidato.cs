@@ -11,14 +11,14 @@ namespace Eleicoes.Domain.Entities
         public DateTime Nascimento { get; private set; }
         public string CPF { get; private set; }
         public string Email { get; private set; }
-        public Genero Genero { get; private set; }
-        public GrauInstrucao GrauInstrucao { get; private set; }
-        public EstadoCivil EstadoCivil { get; private set; }
-        public Ocupacao Ocupacao { get; private set; }
         public string Agremiacao { get; private set; }
         public string UFNascimento { get; private set; }
         public string MunicipioNascimento { get; private set; }
         public string TituloEleitor { get; private set; }
+        public Genero Genero { get; private set; }
+        public GrauInstrucao GrauInstrucao { get; private set; }
+        public EstadoCivil EstadoCivil { get; private set; }
+        public Ocupacao Ocupacao { get; private set; }
         public Cargo Cargo { get; private set; }
         public Coligacao Coligacao { get; private set; }
         public Partido Partido { get; private set; }

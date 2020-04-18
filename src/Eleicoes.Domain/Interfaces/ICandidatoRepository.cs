@@ -7,7 +7,7 @@ namespace Eleicoes.Domain.Interfaces
 {
     public interface ICandidatoRepository
     {
-        IQueryable<Candidato> Lista(string ano);
+        IQueryable<Candidato> Lista(string anoEleicao);
         void Adiciona(Candidato candidato);
         Task AdicionaAsync(IEnumerable<Candidato> candidatos);
     }

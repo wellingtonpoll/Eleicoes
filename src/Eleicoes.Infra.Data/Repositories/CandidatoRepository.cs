@@ -3,6 +3,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Eleicoes.Domain.Entities;
 using Eleicoes.Domain.Interfaces;
+using Eleicoes.Infra.Data.Builders;
 
 namespace Eleicoes.Infra.Data.Repositories
 {
@@ -20,7 +21,8 @@ namespace Eleicoes.Infra.Data.Repositories
 
         public IQueryable<Candidato> Lista(string ano)
         {
-            throw new System.NotImplementedException();
+            var candidatoBuilder = new CandidatoBuilder();
+            return candidatoBuilder.BuildList().AsQueryable();
         }
     }
 }
